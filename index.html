@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070914" />
+  <title>The Secret Gift | For Riya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="space-bg" aria-hidden="true">
+    <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    <div class="grid-floor"></div><div class="stars" id="stars"></div>
+  </div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="The Secret Gift home">
+        <span class="brand-mark">✦</span><span>THE <b>SECRET GIFT</b></span>
+      </a>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">
+        <span id="soundIcon">♫</span> <span id="soundLabel">Sound off</span>
+      </button>
+    </header>
+
+    <section class="lock-screen glass-panel" id="lockScreen">
+      <div class="eyebrow"><span class="pulse-dot"></span> PRIVATE TRANSMISSION · 001</div>
+      <div class="gift-scene" aria-hidden="true">
+        <div class="gift-aura"></div>
+        <div class="gift-box">
+          <div class="gift-lid"><span></span></div>
+          <div class="gift-body"><span class="gift-ribbon"></span></div>
+          <div class="gift-bow"><i></i><i></i></div>
+        </div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      </div>
+      <p class="tiny-label">A LITTLE SOMETHING, JUST FOR YOU</p>
+      <h1>Hey, <span class="gradient-text">Riya.</span></h1>
+      <p class="intro">Someone made a tiny universe for you.<br />
+        <strong class="sister-tagline">Riya is the best sister 💜✨</strong><br />
+        There is just one little lock between you and your surprise.
+      </p>
+      <form id="unlockForm" class="unlock-form">
+        <label for="passcode">ENTER THE SECRET CODE</label>
+        <div class="input-row">
+          <input id="passcode" type="password" placeholder="Enter passcode" autocomplete="off" required />
+          <button class="unlock-button" type="submit">Unlock <span>↗</span></button>
+        </div>
+        <p class="hint">Hint: <span id="hintText">her name, in lowercase</span></p>
+        <p class="error-message" id="errorMessage" role="status" aria-live="polite"></p>
+      </form>
+      <div class="bottom-note"><span>◈</span> MADE WITH CARE <span class="note-line"></span> FOR RIYA</div>
+    </section>
+
+    <section class="gift-content hidden" id="giftContent">
+      <div class="welcome-banner glass-panel">
+        <div>
+          <div class="eyebrow"><span class="pulse-dot"></span> ACCESS GRANTED</div>
+          <h1>Welcome to your<br /><span class="gradient-text">little universe.</span></h1>
+          <p class="sister-tagline welcome-tagline">Riya is the best sister 💜✨</p>
+          <p class="intro">This gift has no price tag. Just a few words that I wanted you to have.</p>
+        </div>
+        <div class="mini-planet" aria-hidden="true"><div class="planet-ring"></div><div class="planet-core"></div></div>
+      </div>
+
+      <div class="section-heading"><span>01 / THE LETTER</span><i></i></div>
+      <article class="letter-card glass-panel">
+        <div class="letter-icon">✉</div><p class="letter-kicker">A NOTE FOR YOU</p>
+        <h2>Dear Riya,</h2>
+        <div class="letter-copy" id="letterCopy">
+          <p>I wanted to make you something a little different — not something you can keep on a shelf, but a small place on the internet that is yours.</p>
+          <p>Thank you for being the kind of person who can make an ordinary day feel a little brighter. I hope you always remember that you deserve kindness, peace, laughter, and people who genuinely care about you.</p>
+          <p>No matter how busy life gets, keep being curious, keep growing at your own pace, and never forget how much your presence can mean to someone.</p>
+          <p>This little universe is just a reminder: you matter, and I'm glad you're my sister.</p>
+        </div>
+        <div class="signature">Always cheering for you, <span>your brother Mohit ✦</span></div>
+        <button class="outline-button" id="editLetter" type="button">Personalise this letter ✎</button>
+        <p class="small-note">You can edit the letter here too — changes last until you refresh.</p>
+      </article>
+
+      <div class="section-heading"><span>02 / YOUR SURPRISE</span><i></i></div>
+      <section class="surprise-card glass-panel">
+        <div class="surprise-copy">
+          <p class="letter-kicker">A MESSAGE FROM THE STARS</p>
+          <h2 id="surpriseTitle">A little reminder ✨</h2>
+          <p id="surpriseMessage">You don't need to be perfect to make a difference. Being your own kind of wonderful is more than enough.</p>
+          <button class="primary-button" id="surpriseButton" type="button">Reveal another message <span>✦</span></button>
+        </div>
+        <div class="crystal" aria-hidden="true"><div class="crystal-shape"></div><span class="crystal-spark s1">✦</span><span class="crystal-spark s2">✧</span><span class="crystal-spark s3">·</span></div>
+      </section>
+
+      <div class="section-heading"><span>03 / KEEP THIS CLOSE</span><i></i></div>
+      <section class="affirmation-grid">
+        <div class="affirmation glass-panel"><span>✧ 01</span><b>You are appreciated.</b><p>Even on the days nobody says it out loud.</p></div>
+        <div class="affirmation glass-panel"><span>✧ 02</span><b>Take your time.</b><p>Your path does not have to look like anyone else's.</p></div>
+        <div class="affirmation glass-panel"><span>✧ 03</span><b>Keep shining.</b><p>The world needs your own kind of light.</p></div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-star">✦</div><p>END OF TRANSMISSION</p>
+        <span>Some gifts are small websites with a big heart.</span>
+        <p class="made-by">Made with care by <strong>Mohit</strong> 💜</p>
+        <button id="relockButton" class="text-button" type="button">Lock the gift again</button>
+      </footer>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card glass-panel">
+      <button class="modal-close" id="closeModal" aria-label="Close" type="button">×</button>
+      <p class="letter-kicker">MAKE IT YOURS</p><h2 id="modalTitle">Personalise the letter</h2>
+      <p class="modal-help">Change the note below. It will update on this page until you refresh.</p>
+      <textarea id="letterEditor" rows="8" aria-label="Letter text"></textarea>
+      <button class="primary-button" id="saveLetter" type="button">Save letter <span>✓</span></button>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
